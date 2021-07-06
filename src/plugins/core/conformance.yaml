@@ -1,0 +1,19 @@
+podSpec:
+  serviceAccountName: sonobuoy-serviceaccount
+sonobuoy-config:
+  driver: Job
+  # plugin name must be started with "azure-arc"
+  plugin-name: azure-arc-amlarc-conformance
+  result-format: junit
+spec:
+  image: amlk8s.azurecr.io/public/azureml/amlarc/docker/experimental/amlarc-conformance-test:v0.1.0
+  imagePullPolicy: Always
+  name: plugin
+  resources: {}
+  volumes:
+  - name: results
+    emptyDir: {}
+  volumeMounts:
+  - mountPath: /tmp/results
+    name: results
+
