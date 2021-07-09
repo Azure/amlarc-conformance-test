@@ -1,5 +1,6 @@
 podSpec:
   serviceAccountName: sonobuoy-serviceaccount
+  restartPolicy: Never
 sonobuoy-config:
   driver: Job
   # plugin name must be started with "azure-arc"
@@ -16,4 +17,3 @@ spec:
   volumeMounts:
   - mountPath: /tmp/results
     name: results
-
