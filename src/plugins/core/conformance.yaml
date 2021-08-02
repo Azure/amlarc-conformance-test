@@ -7,7 +7,7 @@ sonobuoy-config:
   plugin-name: azure-arc-amlarc-conformance
   result-format: junit
 spec:
-  image: amlk8s.azurecr.io/public/azureml/amlarc/docker/experimental/amlarc-conformance-test:v0.1.0
+  image: amlk8s.azurecr.io/public/azureml/amlarc/docker/experimental/amlarc-conformance-test:v0.1.1
   imagePullPolicy: Always
   name: plugin
   resources: {}
