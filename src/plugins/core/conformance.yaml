@@ -10,7 +10,9 @@ spec:
   image: amlk8s.azurecr.io/public/azureml/amlarc/docker/staging/amlarc-conformance-test:v0.2.1
   imagePullPolicy: Always
   name: plugin
-  resources: {}
+  resources:
+    requests:
+      ephemeral-storage: 512Mi
   volumes:
   - name: results
     emptyDir: {}
